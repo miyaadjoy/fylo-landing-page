@@ -1,0 +1,51 @@
+.store
+{
+    text-align: center;
+    margin-bottom: 5.625rem;
+
+    @include breakpoint-up(large)
+    {
+        text-align: start;
+        display: flex;
+        gap: 5%;
+        align-items: center;
+
+        margin-bottom: 10rem;
+    }
+
+    &__text
+    {
+        flex: 1;
+        order: 1;
+    }
+
+    &__heading
+    {
+        line-height: 1.5;
+        margin-bottom: 1.5625rem;
+
+    }
+    &__desc
+    {
+        margin-bottom: 1.5625rem;
+    }
+
+    
+
+
+    &__image
+    {
+        flex: 1;
+        order: 2;
+        margin-bottom: 2.3125rem;
+        @include breakpoint-up(large)
+        {
+            margin-bottom: 0;
+        }
+
+        img 
+        {
+            width: 100%;
+        }
+    }
+}

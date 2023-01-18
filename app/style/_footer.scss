@@ -1,0 +1,120 @@
+.footer
+{
+    color: #FFF;
+    @include breakpoint-up(large)
+    {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    
+    &__logo
+    {
+        display: block;
+        margin-bottom: 2.5rem;
+
+    }
+
+    &__contacts
+    {
+        margin-bottom: 3.4375rem;
+    }
+
+    &__phone
+    {
+        margin-bottom: 1.125rem;
+        img 
+        {
+            margin-right: 1rem;
+        }
+    }
+
+    &__email
+    {
+        img 
+        {
+            margin-right: 1rem;
+        }
+    }
+
+    &__link1
+    {
+        a 
+        {
+            color: #FFF;
+            display: block;
+
+            &:not(:last-child)
+            {
+                margin-bottom: 1.125rem;
+            }
+
+            transition: all 200ms ease-in-out;
+            &:hover
+            {
+                color: $brightBlue;
+            }
+        }
+
+        margin-bottom: 3.125rem;
+    }
+
+    &__link2
+    {
+        a 
+        {
+            color: #FFF;
+            display: block;
+
+            &:not(:last-child)
+            {
+                margin-bottom: 1.125rem;
+            }
+            transition: all 200ms ease-in-out;
+            &:hover
+            {
+                color: $brightBlue;
+            }
+        }
+        margin-bottom: 3.125rem;
+    }
+
+
+    &__social
+    {
+        text-align: center;
+        a:not(:last-child)
+        {
+            margin-right: 1rem;
+        }
+    }
+
+
+
+
+
+    &__wrapper
+    {
+        background-color: $veryDarkBlue;
+        padding-top: 4.0625rem;
+        padding-bottom: 2.8125rem;
+    }
+}
+
+
+
+.bi-facebook, .bi-twitter, .bi-instagram
+{
+    path 
+    {
+        transition: all 200ms ease-in-out;
+    }
+    &:hover
+    {
+        path 
+        {
+            fill: $brightBlue;
+        }
+    }
+}
+    

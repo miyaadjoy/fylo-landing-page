@@ -1,0 +1,71 @@
+.access
+{
+    text-align: center;
+    color: #fff;
+    padding-top: 3.4375rem;
+    padding-bottom: 4.375rem;
+
+    @include breakpoint-up(large)
+    {
+        display: flex;
+        align-items: center;
+        gap: 11%;
+        text-align: start;
+
+        padding-top: 5.625rem;
+        padding-bottom: 5.625rem;
+    }
+
+    &__text
+    {
+        flex: 1;
+    }
+
+
+    &__heading
+    {
+        margin-bottom: 1.125rem;
+    }
+
+    &__desc
+    {
+        margin-bottom: 1.5rem;
+        @include breakpoint-up(large)
+        {
+            margin-bottom: 0;
+        }
+    }
+
+
+
+    &__form
+    {
+        flex: 1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    &__wrapper
+    {
+        background-color: $desaturatedBlue;
+    }
+}
+
+input#access-email
+{
+    max-width: 480px;
+    margin-bottom: 1rem;
+}
+
+input#get-access
+{
+    max-width: 480px;
+}

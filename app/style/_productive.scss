@@ -1,0 +1,164 @@
+.productive
+{
+    position: relative;
+    padding-bottom: 5rem;
+    &__wrapper
+    {
+        position: relative;
+        background-image: url('../../images/bg-curve-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        @include breakpoint-up(large)
+        {
+            background-image: url('../../images/bg-curve-desktop.svg');
+           
+            
+
+        }
+
+    }
+    text-align: center;
+    padding-top: 5rem;
+
+    @include breakpoint-up(large)
+    {
+        text-align: start;
+        display: flex;
+        gap: 5%;
+        align-items: center;
+        
+        padding-bottom: 6.875rem;
+        padding-top: 10.3125rem;
+    }
+
+    &__text
+    {
+        flex: 1;
+        order: 1;
+    }
+    &__heading
+    {
+        line-height: 1.5;
+        margin-bottom: 1.5625rem;
+
+    }
+    &__desc
+    {
+        margin-bottom: 1.5625rem;
+    }
+
+    //cta link
+
+    &__ctaLink
+    {
+        position: relative;
+
+        margin-bottom: 2.8125rem;
+        justify-content: center;
+
+        @include breakpoint-up(large)
+        {
+            justify-content: flex-start;
+        }
+
+        &::before
+        {
+            content: "";
+            position: absolute;
+            background-color: $moderateCyan;
+            width: 47.5%;
+            @include breakpoint-up(large)
+            {
+                width: 32.5%;
+            }
+            height: 1px;
+            bottom: -5px;
+        }
+        a 
+        {
+            color: $moderateCyan;
+
+        }
+    }
+
+    &__testimonial
+    {
+        text-align: start;
+        font-size: $verySmallFont;
+        @include breakpoint-up(large)
+        {
+            font-size: $mobileBodyFont;
+        }
+        
+        max-width: 22.5rem;
+        max-height: 13.4375rem;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 3px 20px rgb(0 0 0 / 7%);
+
+        padding: 1.5625rem 1.875rem;
+
+        .text
+        {
+            margin-bottom: 1.125rem;
+
+        }
+
+        .client
+        {
+            &-avatar
+            {
+                img 
+                {
+                    display: inline-block;
+                    width: 35px;
+                    border: none;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+            }
+
+            &-name
+            {
+                font-size: $verySmallFont;
+                font-weight: 700;
+                
+                @include breakpoint-up(large)
+                {
+                    font-size: $mobileBodyFont;
+                }
+            }
+
+            &-designation
+            {
+                font-size: 0.625rem;
+                @include breakpoint-up(large)
+                {
+                    font-size: $verySmallFont;
+                }
+                
+        
+            }
+        }
+    }
+
+
+
+    &__image
+    {
+        flex: 1;
+        order: 2;
+        margin-bottom: 2.3125rem;
+        @include breakpoint-up(large)
+        {
+            margin-bottom: 0;
+        }
+
+        img 
+        {
+            width: 100%;
+        }
+    }
+}

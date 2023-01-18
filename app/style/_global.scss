@@ -1,0 +1,170 @@
+html
+{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after
+{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    color: $veryDarkBlue;
+    font-size: $mobileBodyFont;
+    @include breakpoint-up(large)
+    {
+        font-size : $bodyFont;
+    }
+        
+    font-weight: 400;
+
+}
+
+
+//heading
+
+h1,h2,h3
+{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1;
+}
+
+h1{
+    font-size: 1.5625rem;
+    
+    @include breakpoint-up(large)
+    {
+        font-size: 2.1875rem;
+    }
+}
+
+
+//button
+.button, button
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+a, a:hover, a:focus, a:active, a:visited
+{
+    // display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    color: $veryDarkBlue;
+    text-decoration: none;
+}
+
+//responsiveness
+
+// hide for mobile & tablet
+
+.hide-mobile
+{
+    @include breakpoint-down(medium)
+    {
+        display: none;
+    }
+}
+
+//hide for desktop
+
+.hide-desktop
+{
+    @include breakpoint-up(large)
+    {
+        display: none;
+    }
+}
+
+//flex 
+
+.flex
+{
+    display: flex;
+
+    &-ai-c
+    {
+        align-items: center;
+    }
+    
+    &-jc-c
+    {
+        justify-content: center;
+    }
+
+    &-jc-sb
+    {
+        justify-content: space-between;
+    }
+}
+
+.container
+{
+
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @include breakpoint-up(large)
+    {
+        max-width: 80rem;
+        margin: 0 auto;
+        
+    }
+}
+
+
+input[type = 'email']
+{
+    font-family: 'Raleway', sans-serif;
+    // color: $lightGrayishBlue;
+    font-size: $mobileBodyFont;
+    padding: 0.9375rem 1.25rem;
+    border: 1px solid $lightGray;
+    border-radius: 2.5px;
+    outline: none;
+
+    margin-bottom: 1rem;
+    @include breakpoint-up(large)
+    {
+        max-width: 300px;
+        // margin-bottom: 0;
+
+    }
+    
+    width: 100%;
+
+    @include breakpoint-up(large)
+    {
+        margin-right: 1rem;
+    }
+
+   
+
+  
+}
+
+input[type = 'submit']
+{
+    font-family: 'Raleway', sans-serif;
+    color: #FFF;
+
+    font-size: $mobileBodyFont;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    background-color: $brightBlue;
+    padding: 0.9375rem 1.25rem;
+
+    border: 1px solid $brightBlue;
+    border-radius: 2.5px;
+    outline: none;
+    @include breakpoint-up(large)
+    {
+        max-width: 200px;
+    }
+    width: 100%;
+}
